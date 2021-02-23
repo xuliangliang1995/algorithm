@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include "include/algo_utils.h"
+#define ARRAY_LENGTH 20
 /**
  * 插入排序
  * @param array
@@ -22,11 +23,11 @@ void InsertionSort(int array[], int length) {
 
 
 int main() {
-    int array[20] = {0};
-    RandomIntArray(array, 20);
-    PrintIntArray(array, 20);
-    InsertionSort(array, 20);
+    int array[ARRAY_LENGTH] = {0};
+    RandomIntArray(array, ARRAY_LENGTH);
+    PrintIntArray(array, ARRAY_LENGTH);
+    InsertionSort(array, ARRAY_LENGTH);
     puts("\nInsertion-sort .");
-    PrintIntArray(array, 20);
+    PrintIntArray(array, ARRAY_LENGTH);
     return 0;
 }
