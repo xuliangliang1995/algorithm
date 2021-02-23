@@ -53,6 +53,7 @@ void PartitionMergeSort(int *array, int start, int end) {
         array[const_start++] = array_bak[i];
     }
     free(array_bak);
+    array_bak = NULL;
 }
 
 /**
