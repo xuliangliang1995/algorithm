@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "include/algo_utils.h"
 #define ARRAY_LENGTH 20
 
@@ -30,7 +31,6 @@ void PartitionMergeSort(int *array, int start, int end) {
     int bak_length = end - start + 1;
     int *array_bak = malloc(sizeof(int) * bak_length);
 
-    int const_start = start;
     for (int i = 0; i < bak_length; ++i) {
         if (start > left) {
             array_bak[i] = array[right++];
@@ -49,9 +49,8 @@ void PartitionMergeSort(int *array, int start, int end) {
             array_bak[i] = array[right++];
         }
     }
-    for (int i = 0; i < bak_length; ++i) {
-        array[const_start++] = array_bak[i];
-    }
+    // copy
+    memcpy(array, array_bak, bak_length * sizeof(int));
     free(array_bak);
     array_bak = NULL;
 }
