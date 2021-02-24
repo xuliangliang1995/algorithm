@@ -4,7 +4,7 @@
 
 #ifndef ALGORITHM_STRUCT_LIST_H
 #define ALGORITHM_STRUCT_LIST_H
-struct _list {
+struct ArrayList {
     /**
      * 数组起始指针
      */
@@ -22,7 +22,7 @@ struct _list {
      */
     int size;
 };
-typedef struct _list List;
+typedef struct ArrayList ArrayList;
 #endif //ALGORITHM_STRUCT_LIST_H
 
 /**
@@ -30,7 +30,7 @@ typedef struct _list List;
  * @param size_E
  * @return
  */
-List* Constructor_List(int size_E);
+ArrayList* Constructor_List(int size_E);
 
 /**
  * 构造器（指定初始化容量）
@@ -38,14 +38,14 @@ List* Constructor_List(int size_E);
  * @param size_E
  * @return
  */
-List* Constructor_List_Init_Capacity(int capacity, int size_E);
+ArrayList* Constructor_List_Init_Capacity(int capacity, int size_E);
 
 /**
  * 添加
  * @param list
  * @param val
  */
-void List_Add(List *list, void *val);
+void List_Add(ArrayList *list, void *val);
 
 /**
  * 根据索引查询
@@ -53,7 +53,7 @@ void List_Add(List *list, void *val);
  * @param index
  * @return
  */
-void* List_Get(List *list, int index);
+void* List_Get(ArrayList *list, int index);
 
 /**
  * 移除某个元素
@@ -61,13 +61,13 @@ void* List_Get(List *list, int index);
  * @param index
  * @return
  */
-void* List_Remove(List *list, int index);
+void* List_Remove(ArrayList *list, int index);
 
 /**
  * 释放
  * @param list
  */
-void List_Free(List **list);
+void List_Free(ArrayList **list);
 
 
 

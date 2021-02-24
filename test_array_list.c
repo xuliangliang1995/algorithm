@@ -2,7 +2,7 @@
 // Created by grasswort on 2021/2/23.
 //
 #include <stdio.h>
-#include "include/struct_list.h"
+#include "include/struct_array_list.h"
 
 typedef struct Student {
     char* name;
@@ -18,10 +18,10 @@ void PrintStudent(Student *student) {
 }
 
 int main() {
-    List *list = Constructor_List(sizeof(Student));
-    printf("list -> capacity : %d\n", list->capacity);
-    printf("list -> size : %d\n", list->size);
-    printf("list -> size_E : %d\n", list->size_E);
+    ArrayList *list = Constructor_List(sizeof(Student));
+    printf("ArrayList -> capacity : %d\n", list->capacity);
+    printf("ArrayList -> size : %d\n", list->size);
+    printf("ArrayList -> size_E : %d\n", list->size_E);
 
     Student jerry = {.name="jerry", .age=8};
     List_Add(list, &jerry);
@@ -30,7 +30,7 @@ int main() {
     Student *index_0_val = List_Get(list, 0);
     PrintStudent(index_0_val);
 
-    printf("list -> size : %d\n", list->size);
+    printf("ArrayList -> size : %d\n", list->size);
     List_Free(&list);
     return 0;
 }

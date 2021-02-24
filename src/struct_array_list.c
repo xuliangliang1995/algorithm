@@ -6,7 +6,7 @@
 
 #ifndef ALGORITHM_STRUCT_LIST_H
 #define ALGORITHM_STRUCT_LIST_H
-struct _list {
+struct ArrayList {
     /**
      * 数组起始指针
      */
@@ -24,7 +24,7 @@ struct _list {
      */
     int size;
 };
-typedef struct _list List;
+typedef struct ArrayList ArrayList;
 #endif //ALGORITHM_STRUCT_LIST_H
 #define LIST_INIT_CAPACITY 10
 
@@ -34,8 +34,8 @@ typedef struct _list List;
  * @param size_E
  * @return
  */
-List* Constructor_List_Init_Capacity(int capacity, int size_E) {
-    List* list = malloc(sizeof(List));
+ArrayList* Constructor_List_Init_Capacity(int capacity, int size_E) {
+    ArrayList* list = malloc(sizeof(ArrayList));
     void* array = malloc(size_E * capacity);
     list->size_E = size_E;
     list->size = 0;
@@ -49,7 +49,7 @@ List* Constructor_List_Init_Capacity(int capacity, int size_E) {
  * @param size_E
  * @return
  */
-List* Constructor_List(int size_E) {
+ArrayList* Constructor_List(int size_E) {
     return Constructor_List_Init_Capacity(LIST_INIT_CAPACITY, size_E);
 }
 
@@ -58,7 +58,7 @@ List* Constructor_List(int size_E) {
  * @param list
  * @param val
  */
-void List_Add(List *list, void *val) {
+void List_Add(ArrayList *list, void *val) {
     int size = list->size;
     int capacity = list->capacity;
     int size_E = list->size_E;
@@ -87,8 +87,8 @@ void List_Add(List *list, void *val) {
  * @param index
  * @return
  */
-void* List_Get(List *list, int index) {
-    List _list = *list;
+void* List_Get(ArrayList *list, int index) {
+    ArrayList _list = *list;
     char* array = _list.array;
     return array + index * _list.size_E;
 }
@@ -99,7 +99,7 @@ void* List_Get(List *list, int index) {
  * @param index
  * @return
  */
-void* List_Remove(List *list, int index) {
+void* List_Remove(ArrayList *list, int index) {
 
 }
 
@@ -107,8 +107,8 @@ void* List_Remove(List *list, int index) {
  * 释放
  * @param list
  */
-void List_Free(List **list) {
-    List *_list_p = *list;
+void List_Free(ArrayList **list) {
+    ArrayList *_list_p = *list;
     free(_list_p->array);
     free(_list_p);
     *list = NULL;
