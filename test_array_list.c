@@ -24,11 +24,12 @@ int main() {
     printf("ArrayList -> size_E : %d\n", list->size_E);
 
     Student jerry = {.name="jerry", .age=8};
-    List_Add(list, &jerry);
-    PrintStudent(&jerry);
 
-    Student *index_0_val = List_Get(list, 0);
-    PrintStudent(index_0_val);
+    for (int i = 0; i < 10; ++i) {
+        List_Add(list, &jerry);
+        Student *index_0_val = List_Get(list, i);
+        PrintStudent(index_0_val);
+    }
 
     printf("ArrayList -> size : %d\n", list->size);
     List_Free(&list);
