@@ -35,7 +35,7 @@ void RandomIntArray(int *array, int length) {
  */
 void PrintIntArray(int array[], int length) {
     for (int i = 0; i < length; ++i) {
-        printf((i == length - 1) ? "%d" : "%d, ", array[i]);
+        printf((i == length - 1) ? "%d\n" : "%d, ", array[i]);
     }
 }
 
