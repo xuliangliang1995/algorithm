@@ -26,3 +26,11 @@ void RandomIntArray(int *array, int length);
  * @param length
  */
 void PrintIntArray(int array[], int length);
+
+/**
+ * 比较两个数组
+ * @param arr1
+ * @param arr2
+ * @param length
+ */
+int CompareArray(const int arr1[], const int arr2[], int length);

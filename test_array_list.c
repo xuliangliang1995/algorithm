@@ -32,6 +32,8 @@ int main() {
 
     printf("ArrayList -> size : %d\n", list->size);
     List_Free(&list);
+
+    printf("Print after free list . \n");
     return 0;
 }
 

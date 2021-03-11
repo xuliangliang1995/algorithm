@@ -39,3 +39,19 @@ void PrintIntArray(int array[], int length) {
     }
 }
 
+
+/**
+ * 比较两个数组
+ * @param arr1
+ * @param arr2
+ * @param length
+ */
+int CompareArray(const int arr1[], const int arr2[], int length) {
+    for (int i = 0; i < length; ++i) {
+        if (arr1[i] != arr2[i]) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
