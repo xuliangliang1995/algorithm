@@ -1,6 +1,7 @@
 //
 // Created by grasswort on 2021/2/23.
 //
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -26,7 +27,7 @@ struct ArrayList {
 };
 typedef struct ArrayList ArrayList;
 #endif //ALGORITHM_STRUCT_LIST_H
-#define LIST_INIT_CAPACITY 10
+#define LIST_INIT_CAPACITY 5
 
 /**
  * 构造器（指定初始化容量）
@@ -74,6 +75,7 @@ void List_Add(ArrayList *list, void *val) {
         list->array = NULL;
         list->array = array_ext;
         list->capacity = capacity_ext;
+        printf("Automatic expansion %d => %d\n", capacity, capacity_ext);
     }
 
     list->size = list->size + 1;
@@ -89,8 +91,8 @@ void List_Add(ArrayList *list, void *val) {
  */
 void* List_Get(ArrayList *list, int index) {
     ArrayList _list = *list;
-    char* array = _list.array;
-    return array + index * _list.size_E;
+    void * array = _list.array;
+    return array + index;
 }
 
 /**
