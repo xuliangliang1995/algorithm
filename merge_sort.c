@@ -59,7 +59,7 @@ void PartitionSort(int array[], int left, int right) {
 }
 
 /**
- * 归并排序  时间复杂度 O(lg^2)
+ * 归并排序  时间复杂度 O(n * lg^n)
  * @param array
  * @param length
  */
