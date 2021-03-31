@@ -1,11 +1,9 @@
 //
-// Created by 许良 on 2021/3/11.
+// Created by grasswort on 2021/3/13.
 //
 #include <stdio.h>
 #include <stdlib.h>
 #include <memory.h>
-#include "algo_utils.h"
-#define ARRAY_LENGTH 20
 
 /**
  * 合并 时间复杂度 O(n)
@@ -66,13 +64,3 @@ void PartitionSort(int array[], int left, int right) {
 void MergeSort(int array[], int length) {
     PartitionSort(array, 0, length - 1);
 }
-
-int main() {
-    int array[ARRAY_LENGTH] = {0};
-    RandomIntArray(array, ARRAY_LENGTH);
-    PrintIntArray(array, ARRAY_LENGTH);
-    MergeSort(array, ARRAY_LENGTH);
-    PrintIntArray(array, ARRAY_LENGTH);
-    return 0;
-}
-

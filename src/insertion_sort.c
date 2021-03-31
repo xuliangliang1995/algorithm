@@ -1,9 +1,6 @@
 //
 // Created by grasswort on 2021/2/22.
 //
-#include <stdio.h>
-#include "include/algo_utils.h"
-#define ARRAY_LENGTH 20
 /**
  * 插入排序
  * @param array
@@ -22,13 +19,3 @@ void InsertionSort(int array[], int length) {
     // Tn = a * n^2 + b * n + c  算法时间复杂度： O(n^2)
 }
 
-
-int main() {
-    int array[ARRAY_LENGTH] = {0};
-    RandomIntArray(array, ARRAY_LENGTH);
-    PrintIntArray(array, ARRAY_LENGTH);
-    InsertionSort(array, ARRAY_LENGTH);
-    puts("\nInsertion-sort .");
-    PrintIntArray(array, ARRAY_LENGTH);
-    return 0;
-}

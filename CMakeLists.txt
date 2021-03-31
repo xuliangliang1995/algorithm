@@ -14,6 +14,9 @@ foreach(file ${files})
     add_executable(${name} ${file}
             src/algo_utils.c
             src/struct_array_list.c
+            src/insertion_sort.c
+            src/heap_sort.c
+            src/merge_sort.c
             )
     target_compile_definitions(${name} PUBLIC DEBUG)
 endforeach()

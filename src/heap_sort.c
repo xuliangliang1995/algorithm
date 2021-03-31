@@ -1,10 +1,6 @@
 //
-// Created by 许良 on 2021/3/12.
+// Created by grasswort on 2021/3/13.
 //
-
-#include "algo_utils.h"
-#define ARRAY_LENGTH 20
-
 
 /**
  * MAX_HEAPIFY 堆化  O(h)
@@ -62,13 +58,3 @@ void HeapSort(int array[], int length) {
     }
 
 }
-
-int main() {
-    int array[ARRAY_LENGTH] = {0};
-    RandomIntArray(array, ARRAY_LENGTH);
-    PrintIntArray(array, ARRAY_LENGTH);
-    HeapSort(array, ARRAY_LENGTH);
-    PrintIntArray(array, ARRAY_LENGTH);
-    return 0;
-}
-
